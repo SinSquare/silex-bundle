@@ -1,0 +1,6 @@
+prefix: "/"
+routes:
+    first_route:
+        path: /modules
+        methods: [GET]
+        defaults: { _controller: TestModuleController:getModulesAction }

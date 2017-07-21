@@ -1,0 +1,25 @@
+prefix: "/prefix"
+routes:
+    first_route:
+        path: /first_route
+        methods: [GET]
+        defaults: { _controller: DummyRouteController:firstAction }
+
+    second_route:
+        path: /second_route/{locale}
+        methods: GET    
+        defaults: { _controller: DummyRouteController:secondAction }
+        requirements: 
+            locale: \w{2}
+
+    third_route:
+        path: /third_route/{locale}
+        methods: GET    
+        defaults: { _controller: DummyRouteController:thirdAction }
+        requirements: 
+            locale: \w{2}
+
+    fourth_route:
+        path: /fourth_route/save
+        methods: GET
+        defaults: { _controller: DummyRouteController:fourthAction }
